@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="networkingDemo2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="puU-M9-H0t">
+                                <rect key="frame" x="0.0" y="35" width="375" height="254"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="254" id="glR-2y-4RP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="EpL-VZ-Z93">
+                                <rect key="frame" x="16" y="297" width="344" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLT-bF-U4X">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="GET"/>
+                                        <connections>
+                                            <action selector="getPosts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nCq-aV-VLy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeS-70-VgW">
+                                        <rect key="frame" x="93" y="0.0" width="40" height="30"/>
+                                        <state key="normal" title="POST"/>
+                                        <connections>
+                                            <action selector="postPosts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4b-hb-hpL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUO-MF-Ke4">
+                                        <rect key="frame" x="196" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="PUT"/>
+                                        <connections>
+                                            <action selector="putPosts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dcx-H0-Cuv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOF-IL-WKj">
+                                        <rect key="frame" x="289" y="0.0" width="55" height="30"/>
+                                        <state key="normal" title="DELETE"/>
+                                        <connections>
+                                            <action selector="deletePosts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Eq-5Z-Nt6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EpL-VZ-Z93" firstAttribute="top" secondItem="puU-M9-H0t" secondAttribute="bottom" constant="8" id="A47-gw-1ft"/>
+                            <constraint firstItem="EpL-VZ-Z93" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AEj-sV-Rgx"/>
+                            <constraint firstItem="puU-M9-H0t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="AiF-1j-MtG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EpL-VZ-Z93" secondAttribute="bottom" constant="340" id="Q8G-yp-m1s"/>
+                            <constraint firstItem="puU-M9-H0t" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RGi-vC-aUd"/>
+                            <constraint firstItem="puU-M9-H0t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YbS-2g-gJY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EpL-VZ-Z93" secondAttribute="trailing" constant="15" id="vAd-2I-tWC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="puU-M9-H0t" id="iam-5h-uYu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
